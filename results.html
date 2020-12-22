@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id='results'></div>
+    
+    <script>
+        const getResults=document.getElementById('results')
+
+        new URLSearchParams(window.location.search).forEach((value, name)=>
+        {
+            getResults.append(`${name}: ${value}`);
+            getResults.append(document.createElement('br'))
+        })
+    </script>
+</body>
+</html>
